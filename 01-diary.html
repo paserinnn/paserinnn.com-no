@@ -84,8 +84,32 @@
         </section>
         <footer>
             <a href="index.html">ホームに戻る</a>
-            <p class="footer-text">© 2024 じぶん</p>
+            <p class="footer-text">© 2025 じぶん</p>
         </footer>
     </div>
+
+    
+    <button id="scroll-bottom" title="下へ移動">⌄</button>
+
+    <script>
+        (function(){
+            const btn = document.getElementById('scroll-bottom');
+
+            // // 表示の切替（スクロール位置が下でないときだけ表示）
+            // function toggle() {
+            //     const show = window.scrollY > 300; // 300px を越えたら表示
+            //     btn.style.display = show ? 'flex' : 'none';
+            // }
+
+            // クリックでページ下部へスムーススクロール
+            btn.addEventListener('click', function(){
+                window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+            });
+
+            window.addEventListener('scroll', toggle);
+            // 初期表示判定
+            toggle();
+        })();
+    </script>
 </body>
 </html>

@@ -1,0 +1,472 @@
+:root {
+    --main-color: #dff2f9;
+    --accent-color: #f18123;
+    --support-color: #b9b4e0;
+    --base-color: #fffeff;
+    --text-color: #000000;
+    --line-color: #b9b4e0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-family: "Yomogi", cursive;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.site-header {
+    background-color: var(--main-color);
+    border-bottom: 3px solid var(--support-color);
+}
+
+.home-header {
+    border-bottom: 3px solid var(--support-color);
+}
+
+.home-header h1 {
+    margin: 0;
+    padding: 18px 16px;
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    opacity: 1;
+    text-align: center;
+}
+
+.site-header-inner {
+    width: min(calc(100% - 48px), 1080px);
+    margin: 0 auto;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-brand {
+    display: inline-block;
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2px 4px;
+}
+
+.site-nav a[href$="01-diary.html"] { order: 1; }
+.site-nav a[href$="3-music.html"] { order: 2; }
+.site-nav a[href$="2-book.html"] { order: 3; }
+.site-nav a[href$="5-thoughts.html"] { order: 4; }
+.site-nav a[href$="1-photos.html"] { order: 5; }
+.site-nav a[href$="4-outside.html"] { order: 6; }
+
+a {
+    color: inherit;
+}
+
+.site-nav a,
+.entry-list a,
+footer a {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 2px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.entry-list a:hover,
+.entry-list a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
+    background-color: var(--accent-color);
+    outline: 2px solid transparent;
+}
+
+.page {
+    width: min(calc(100% - 32px), 760px);
+    margin: 58px auto 64px;
+}
+
+.article-page {
+    margin-top: 116px;
+}
+
+.container {
+    width: 100%;
+}
+
+.home-page {
+    width: min(calc(100% - 32px), 760px);
+    margin-top: 58px;
+    text-align: left;
+}
+
+.home-foreword {
+    width: min(100%, 580px);
+    margin: 0 auto 68px;
+    text-align: left;
+}
+
+.home-foreword p {
+    margin: 0;
+    text-align: left;
+}
+
+.home-intro {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    width: min(100%, 700px);
+    margin: 0 auto 64px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid var(--text-color);
+    text-align: left;
+}
+
+.home-intro p {
+    margin: 0;
+    text-align: left;
+}
+
+.home-intro > p {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.home-section {
+    margin-top: 36px;
+}
+
+.profile-placeholder {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 26px;
+    border: 2px solid var(--support-color);
+    border-radius: 50%;
+    background: var(--base-color);
+}
+
+.profile-image {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    border: 2px solid var(--support-color);
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-block {
+    flex: 0 0 120px;
+    text-align: center;
+}
+
+.home-intro .profile-name {
+    margin: 8px 0 0;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.home-columns {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    gap: 0;
+    width: calc(100% - 90px);
+    margin-left: 90px;
+}
+
+.home-columns .home-section {
+    margin-top: 0;
+}
+
+.home-columns .home-section:last-child {
+    margin-right: 96px;
+}
+
+.home-section h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.home-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-links li {
+    margin: 5px 0;
+    text-align: left;
+}
+
+.home-links a,
+.home-links span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+
+.home-links a::before,
+.home-links span::before {
+    width: 8px;
+    height: 8px;
+    background: var(--support-color);
+    content: "";
+}
+
+.home-links a:hover,
+.home-links a:focus-visible {
+    background: var(--accent-color);
+    outline: none;
+}
+
+.page-header {
+    margin-bottom: 34px;
+    text-align: center;
+}
+
+.yomogi-regular,
+.page-header h1 {
+    margin: 0 0 8px;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.subtittle {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.entry-content h3 {
+    margin: 38px 0 7px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.entry-content h4 {
+    margin: 0 0 5px;
+    font-size: 21px;
+}
+
+.entry-content p {
+    margin: 0 0 16px;
+}
+
+.entry-content ul {
+    margin: 0;
+    padding-left: 28px;
+}
+
+.entry-content li {
+    padding: 5px 0;
+}
+
+.entry-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.entry-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.entry-list time {
+    flex: 0 0 94px;
+    font-size: 16px;
+}
+
+.entry-list a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.article-meta {
+    display: none;
+}
+
+.article-body {
+    margin: 0 auto;
+}
+
+.article-body a {
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+figure {
+    margin: 18px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    margin-top: 64px;
+    text-align: center;
+}
+
+.footer-text {
+    margin-top: 42px;
+    font-size: 15px;
+}
+
+.page-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    z-index: 10;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 8px 12px;
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 3px 3px 0 var(--text-color);
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.page-top:hover,
+.page-top:focus-visible {
+    background: var(--support-color);
+    transform: translate(-1px, -1px);
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 17px;
+    }
+
+    .site-header-inner {
+        width: 100%;
+        padding: 14px 16px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .site-brand {
+        font-size: 22px;
+    }
+
+    .home-header h1 {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        font-size: 28px;
+    }
+
+    .site-nav {
+        gap: 1px 2px;
+    }
+
+    .site-nav a {
+        padding: 2px 5px;
+        font-size: 16px;
+    }
+
+    .page {
+        width: 100%;
+        margin-top: 34px;
+        margin-bottom: 44px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .article-page {
+        margin-top: 68px;
+    }
+
+    .home-page {
+        margin-top: 34px;
+    }
+
+    .home-foreword {
+        margin-bottom: 48px;
+    }
+
+    .home-intro {
+        gap: 20px;
+        margin-bottom: 44px;
+        padding-bottom: 28px;
+    }
+
+    .home-columns {
+        grid-template-columns: 1fr;
+        justify-content: stretch;
+        gap: 18px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .home-columns .home-section:last-child {
+        margin-right: 0;
+    }
+
+    .yomogi-regular,
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .entry-list li {
+        display: block;
+        padding: 11px 0;
+    }
+
+    .entry-list time {
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    .page-top {
+        right: 14px;
+        bottom: 16px;
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 14px;
+    }
+}

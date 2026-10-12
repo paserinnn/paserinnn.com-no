@@ -3,54 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>外出懐コ</title>
+    <title>外出懐コ | 白シ透明</title>
     <link rel="stylesheet" href="./0-style.css">
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-    <header>
-        <h1 class="yomogi-regular">外出懐コ</h1>
-        <p class="subtittle">日光を浴びるのだ</p>
+<body id="top">
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="index.html">白シ透明</a>
+            <nav class="site-nav" aria-label="メインメニュー">
+                <a href="01-diary.html">生活キ録</a>
+                <a href="1-photos.html">写真</a>
+                <a href="2-book.html">本</a>
+                <a href="5-thoughts.html">思想</a>
+                <a href="3-music.html">音楽</a>
+                <a href="4-outside.html">外出懐コ</a>
+            </nav>
+        </div>
     </header>
-    <section>
-        <article class="entry">
-            <div class="entry-content">
-                <h3 class="current-date">2024/??/??</h3>
-                <figure>
-                    <!-- <img src="" alt="" style="max-width:70%; height:auto;">
-                    <figcaption></figcaption> -->
-                </figure>
-                <h4>台湾</h4>
-                <p>台湾いきたい。気持ちだけある、惨め。</p>
-
-                <h3 class="current-date">2025/01/19</h3>
-                <h4>台湾行ってきました</h4>
-                <p>12月の後半、クリスマスらへんに一人で行ってきた。初海外だね。
-                    <br>いくらでも、その時のこと書けるけど、今じゃないかな。ごめん。
-                    <br>でも今月中か春休み入ってからでもいいかも。
-                </p>
-
-
-                <h3 class="current-date">2025/0/21</h3>
-                <h4>横浜インプレッション</h4>
-                <p>今回は二人で行きました。悪くいうつもりは全くないんですけど、一人の方が自分にあってるかも。
-                    <br>でも二人で行くのもあり。いろいろな意味で。話すの楽しいしね。
-                    <br>後悔があるとすれば、もう少し食べれたかなってところ。そこにいるとき、そこのものに浸りたい。
-                    <br>紫陽花が生える土壌で花の色が変わるみたいに。例え雑すぎ。でも、そんな感じ。
-                    <br>んで、印象に残ったことは、風。風がつよい。その時、寒波が強いとかあったみたいなんですけど、
-                    <br>それにしても、会社員の人たちは何食わぬ顔だった。私は、目がかっ開いってた。うｎ。
-                </p>
-
-            </div>
-        </article>
-    </section>
-    <footer>
-        <a href="index.html">ホームに戻る</a>
-        <p class="footer-text">© 2026 じぶん</p>
-    </footer>
-
-    </div>
-
+    <main class="page">
+        <header class="page-header">
+            <h1 class="yomogi-regular">外出懐コ</h1>
+            <p class="subtittle">日光を浴びるのだ</p>
+        </header>
+        <ul class="entry-list">
+            <li><time>2025/0/21</time><a href="outside/3.html">横浜インプレッション</a></li>
+            <li><time>2025/01/19</time><a href="outside/2.html">台湾行ってきました</a></li>
+            <li><time>2024/10/26</time><a href="outside/1.html">台湾</a></li>
+        </ul>
+        <footer><a href="index.html">topに戻る</a><p class="footer-text">© 2026 じぶん</p></footer>
+    </main>
+    <a class="page-top" href="#top" aria-label="ページ上部へ戻る">↑</a>
 </body>
 </html>
+

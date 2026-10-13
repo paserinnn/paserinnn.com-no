@@ -3,56 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>写真</title>
-    <link rel="stylesheet" href="./0-style.css">
+    <title>写真 | 白シ透明</title>
+    <link rel="stylesheet" href="./site.css">
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-    <header>
-        <h1 class="yomogi-regular">写真</h1>
-        <p class="subtittle">ここにしかない世界</p>
+<body id="top">
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="index.html">白シ透明</a>
+            <nav class="site-nav" aria-label="メインメニュー">
+                <a href="01-diary.html">生活キ録</a>
+                <a href="1-photos.html">写真</a>
+                <a href="2-book.html">本</a>
+                <a href="5-thoughts.html">思想</a>
+                <a href="3-music.html">音楽</a>
+                <a href="4-outside.html">外出懐コ</a>
+            </nav>
+        </div>
     </header>
-    <section>
-        <article class="entry">
-            <div class="entry-content">
-                <h3 class="current-date">2025/11/23</h3>
-                <ul>
-                    <li>NO.1
-                <figure>
-                    <img src="gazouu/filmcam_shizuokaSta.JPG" 
-                    alt="静岡駅" style="max-width:70%; height:auto;">
-                    <figcaption></figcaption>
-                </figure>
-                    <p>　　フィルムカメラで撮るのって新鮮</p>
-                    </li>
-                </ul>
-
-                <h3 class="current-date">2025/11/24</h3>
-                <ul>
-                    <li>NO.2
-                <figure>
-                    <img src="gazouu/filmcam_shoppingmall.jpg" 
-                    alt="shoppingmall" style="max-width:70%; height:auto;">
-                    <figcaption></figcaption>
-                </figure>
-                    <p>　　気まぐれで撮ったのにいいいいいい</p>
-                    </li>
-                </ul>
-
-                aaaa
-            
-
-            </div>
-        </article>
-    </section>
-    <footer>
-        <a href="index.html">ホームに戻る</a>
-        <p class="footer-text">© 2026 じぶん</p>
-    </footer>
-
-
-    </div>
-
+    <main class="page">
+        <header class="page-header">
+            <h1 class="yomogi-regular">写真</h1>
+            <p class="subtittle">ここにしかない世界</p>
+        </header>
+        <ul class="entry-list">
+            <li><time>2025/11/24</time><a href="photos/2.html">NO.2</a></li>
+            <li><time>2025/11/23</time><a href="photos/1.html">NO.1</a></li>
+        </ul>
+        <footer><a href="index.html">topに戻る</a><p class="footer-text">© 2026 じぶん</p></footer>
+    </main>
+    <a class="page-top" href="#top" aria-label="ページ上部へ戻る">↑</a>
 </body>
 </html>

@@ -362,7 +362,7 @@ footer {
     padding: 8px 12px;
     border: 2px solid var(--text-color);
     border-radius: 50%;
-    background: var(--accent-color);
+    background: var(--support-color);
     color: var(--text-color);
     font-size: 16px;
     line-height: 1;
@@ -373,7 +373,7 @@ footer {
 
 .page-top:hover,
 .page-top:focus-visible {
-    background: var(--support-color);
+    background: var(--accent-color);
     transform: translate(-1px, -1px);
     outline: none;
 }
